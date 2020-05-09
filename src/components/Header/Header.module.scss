@@ -1,0 +1,23 @@
+@import '../../style/mixins.scss';
+@import '../../style/variables.scss';
+
+.header{
+    @include container;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: $boxShadow;
+    position: relative;
+    z-index: 500;
+   
+}
+
+.toggleDarkMode{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    h6{
+        padding-left: 5px;
+    }
+}

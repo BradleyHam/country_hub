@@ -1,0 +1,47 @@
+@import '../../../style/variables.scss';
+$dropdownPadding: 10px;
+$dropdownFontSize: 14px;
+
+.filterDropdown{
+    position: relative;
+  
+ 
+    
+}
+
+.dropdownList{
+    box-shadow: $boxShadow;
+    font-size: $dropdownFontSize;
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: $dropdownPadding;
+    border-radius: $borderRadius;
+    z-index: 100;
+}
+.current{
+    box-shadow: $boxShadow;
+    font-weight: 600;
+    font-size: $dropdownFontSize;
+    padding: $dropdownPadding;
+    cursor: pointer;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: $borderRadius;
+    @media(max-width: 560px){
+        width: 100%;
+    }
+ 
+
+    svg{
+        margin-left: 10px;
+    }
+}
+
+.dropdownItem{
+    padding: 5px;
+    cursor: pointer;
+}

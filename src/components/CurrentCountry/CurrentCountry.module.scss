@@ -1,0 +1,126 @@
+@import '../../style/variables.scss';
+
+
+.currentCountry{
+    position: relative;
+    padding:100px 40px ;
+}
+
+.button{
+    padding: 7px 17px;
+    border:none;
+    border-radius: $borderRadius;
+    cursor: pointer;
+    box-shadow: $boxShadow;
+    margin-right: 10px;
+}
+
+.backButton{
+    position: absolute;
+    top: 30px;
+    padding: 10px 30px;
+}
+
+
+.countryGrid{
+    min-height: 70vh;
+    margin: auto, auto;
+    display:grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60px 150px 1fr;
+    padding: 60px 0 ;
+ 
+}
+
+.countryGrid img{
+    grid-column: 1/2;
+    grid-row: 1/5;
+}
+.countryGrid h1{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    
+}
+.countryGrid ul{
+    grid-column: 2/3;
+    grid-row: 2/3;
+ 
+    display:flex;
+    flex-flow: column wrap;
+}
+.countryGrid li{
+    padding: 3px 0;
+}
+.borderCountries{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    display:flex;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    align-content: flex-start;
+ 
+}
+.borderCountries p{
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.listTitle{
+    padding-right: 5px;
+ }
+ .listValue{
+    opacity: .6;
+}
+
+.language:not(:last-child)::after{
+    content: ',';
+    display: inline-block;
+    padding: 5px;
+    
+}
+
+
+@media(max-width: 900px){
+    .countryGrid{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, min-content);
+    }
+    .countryGrid img{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .countryGrid h1{
+        grid-column: 1/2;
+        grid-row: 2/3;
+       
+        
+    }
+    .countryGrid ul{
+        grid-column: 1/2;
+        grid-row: 3/4;
+     
+        display:flex;
+        flex-flow: column wrap;
+    }
+    .borderCountries{
+        grid-column: 1/2;
+        grid-row: 4/5;
+        display:flex;
+        align-items: flex-start;
+        flex-flow: row wrap;
+        align-content: flex-start;
+     
+    }
+}
+@media(max-width: 600px){
+    .countryGrid ul{
+        flex-flow: column;
+    }
+    .currentCountry{
+        padding: 30px;
+    }
+}

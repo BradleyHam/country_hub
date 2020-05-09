@@ -1,0 +1,53 @@
+@import '../../style/mixins.scss';
+@import '../../style/variables.scss';
+.filterBar{
+    @include container;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media(max-width: 560px){
+        flex-flow: column;
+    }
+}
+
+.search{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    border-radius: $borderRadius;
+    box-shadow: $boxShadow;
+    margin: 10px;
+    @media(max-width: 560px){
+        width: 100%;
+    }
+ 
+    input{
+        background: inherit;
+        color: inherit;
+        border:none;
+        width: 100%;
+        padding: 13px;
+        border-radius: $borderRadius;
+        
+    }
+    form{
+        height: 100%;
+    }
+    button{
+        border: none;
+        background: none;
+        height: 100%;
+        display: inline-block;
+        padding:10px 15px;
+        cursor: pointer;
+        color: inherit;
+    }
+}
+
+.countryFilter{
+    @media(max-width: 560px){
+        width: 100%;
+    }
+ 
+}

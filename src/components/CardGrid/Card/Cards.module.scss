@@ -1,0 +1,35 @@
+@import '../../../style/variables.scss';
+
+.card{
+    height: 300px;
+    box-shadow: $boxShadow;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+}
+
+.flag{
+ height: 50%;
+border-radius: 5px 5px 0 0;
+}
+
+.details{
+    padding: 1rem;
+}
+.card span {
+    opacity: .6
+}
+.card strong{
+    padding-right: 10px;
+    opacity: 1;
+    font-weight: 600
+
+}
+
+.card h3{
+    font-weight: bold;
+
+}
+
