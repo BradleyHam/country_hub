@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import classes from './Cards.module.scss'
 import { toggledStyles } from '../../../style/toggleStyle'
 import { connect } from 'react-redux'

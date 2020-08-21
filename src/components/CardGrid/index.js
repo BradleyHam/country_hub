@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import classes from './CardGrid.module.scss'
@@ -13,7 +13,7 @@ const CardGrid = (props) => {
 
     useEffect(() => {
         props.getData()
-    }, [])
+    })
 
 
     const renderCountrys = () => {
@@ -25,13 +25,13 @@ const CardGrid = (props) => {
             }
 
             return filteredCountrys.map(country =>
-                <Link to={`/country/${country.alpha3Code}`}>
+                <Link key={country.alpha3Code} to={`/country/${country.alpha3Code}`}>
                     <Card country={country}>{country.name}</Card>
                 </Link>)
         }
         return props.countrys.map(country =>
-            <Link to={`/country/${country.alpha3Code}`}>
-                <Card country={country}>{country.name}</Card>
+            <Link key={country.alpha3Code} to={`/country/${country.alpha3Code}`}>
+                <Card  country={country}>{country.name}</Card>
             </Link>)
     }
 

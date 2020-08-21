@@ -17,7 +17,7 @@ const FilterBar = (props) => {
 
     function handleSubmit(e) {
         e.preventDefault();
-        { searchFormValue.length > 0 ? props.searchCountry(searchFormValue) : props.getData() }
+        searchFormValue.length > 0 ? props.searchCountry(searchFormValue) : props.getData();
         setSearchFormValue('');
     }
 

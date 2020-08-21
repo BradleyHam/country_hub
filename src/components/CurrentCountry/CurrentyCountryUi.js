@@ -7,7 +7,7 @@ import { toggledStyles } from '../../style/toggleStyle'
 const CurrentCountryUi = (props) => {
 
     let { name, flag, nativeName, population, region,
-        subregion, capital, topLevelDomain, borders,
+        subregion, capital, borders,
         currencies, languages } = props.currentCountry;
 
     function renderBorders() {
