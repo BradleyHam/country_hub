@@ -1,18 +1,23 @@
 import React from 'react'
 import Header from './Header/Header'
-
+import {
+    HashRouter as Router,
+    Route,
+    Switch
+  } from "react-router-dom";
 import CardGrid from './CardGrid'
 import CurrentCountry from './CurrentCountry/CurrentCountry'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 const App = (props) => {
     return (
         <Router>
             <Header />
-
-            <Route path='/' exact component={CardGrid} />
+            <Switch>
             <Route path='/country/:id' component={CurrentCountry} />
+            <Route path='/'  component={CardGrid} />
+            </Switch>
+            
         </Router>
     );
 }
